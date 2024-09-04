@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="800.0" prefWidth="1200.0" styleClass="background" stylesheets="@../style/application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MarksController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="white-bg" stylesheets="@../style/application.css" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnSave" layoutX="86.0" layoutY="433.0" mnemonicParsing="false" onAction="#procseesave" prefHeight="40.0" prefWidth="71.0" styleClass="save-btn" stylesheets="@../style/application.css" text="Save" AnchorPane.leftAnchor="86.0" AnchorPane.topAnchor="433.0" />
+            <Button fx:id="btEdit" layoutX="711.0" layoutY="20.0" mnemonicParsing="false" onAction="#processsEdit" prefHeight="40.0" prefWidth="71.0" styleClass="edit-btn" stylesheets="@../style/application.css" text="Edit" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="20.0" />
+            <ComboBox fx:id="comboExamType" layoutX="154.0" layoutY="186.0" prefHeight="40.0" prefWidth="200.0" promptText="Exam Type" stylesheets="@../style/application.css">
+               <styleClass>
+                  <String fx:value="transparent" />
+                  <String fx:value="box" />
+               </styleClass></ComboBox>
+            <TextField fx:id="tfSearch" layoutX="897.0" layoutY="20.0" prefHeight="35.0" prefWidth="220.0" promptText="Search" styleClass="search" stylesheets="@../style/application.css" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="20.0" />
+            <Button fx:id="btDelete" layoutX="611.0" layoutY="20.0" mnemonicParsing="false" onAction="#processdelete" prefHeight="40.0" prefWidth="71.0" styleClass="delete-btn" stylesheets="@../style/application.css" text="Delete" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="20.0" />
+            <TableView fx:id="marksTable" layoutX="386.0" layoutY="57.0" prefHeight="675.0" prefWidth="749.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="386.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="70.0">
+               <columns>
+                  <TableColumn fx:id="id" prefWidth="62.0" text="No" />
+                  <TableColumn fx:id="batch" prefWidth="200.0" text="Batch" />
+                  <TableColumn fx:id="year" minWidth="0.0" prefWidth="200.0" text="Year " />
+                  <TableColumn fx:id="examtype" minWidth="0.0" prefWidth="200.0" text="Exam Type" />
+                  <TableColumn fx:id="coursename" minWidth="0.0" prefWidth="200.0" text="Course Name" />
+                  <TableColumn fx:id="studentname" minWidth="0.0" prefWidth="200.0" text="Student Name" />
+                  <TableColumn fx:id="marks" minWidth="0.0" prefWidth="200.0" text="Marks" />
+               </columns>
+            </TableView>
+            <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="1082.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="20.0">
+               <image>
+                  <Image url="@../image/search.png" />
+               </image>
+            </ImageView>
+            <ComboBox fx:id="comboYear" layoutX="154.0" layoutY="127.0" prefHeight="40.0" prefWidth="200.0" promptText="Year" stylesheets="@../style/application.css">
+               <styleClass>
+                  <String fx:value="transparent" />
+                  <String fx:value="box" />
+               </styleClass>
+            </ComboBox>
+            <ComboBox fx:id="comboCourseName" layoutX="155.0" layoutY="247.0" prefHeight="40.0" prefWidth="200.0" promptText="Course" stylesheets="@../style/application.css">
+               <styleClass>
+                  <String fx:value="transparent" />
+                  <String fx:value="box" />
+               </styleClass>
+            </ComboBox>
+            <Label alignment="CENTER_RIGHT" layoutX="16.0" layoutY="70.0" prefHeight="33.0" prefWidth="126.0" text="Choose Batch :" textAlignment="RIGHT">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="16.0" layoutY="128.0" prefHeight="33.0" prefWidth="126.0" text="Choose Year :" textAlignment="RIGHT">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="16.0" layoutY="190.0" prefHeight="33.0" prefWidth="126.0" text="Choose Exam :" textAlignment="RIGHT">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="1.0" layoutY="251.0" prefHeight="33.0" prefWidth="140.0" text="Choose Course :" textAlignment="RIGHT">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfMarks" layoutX="157.0" layoutY="358.0" prefHeight="40.0" prefWidth="200.0" stylesheets="@../style/application.css">
+               <styleClass>
+                  <String fx:value="transparent" />
+                  <String fx:value="input" />
+               </styleClass>
+            </TextField>
+            <Label alignment="CENTER_RIGHT" layoutX="12.0" layoutY="363.0" prefHeight="33.0" prefWidth="126.0" text="Enter Marks : " textAlignment="RIGHT">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutY="312.0" prefHeight="33.0" prefWidth="140.0" text="Choose Student :" textAlignment="RIGHT">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="comboBatch" layoutX="154.0" layoutY="70.0" prefHeight="40.0" prefWidth="200.0" promptText="Batch Name" stylesheets="@../style/application.css">
+               <styleClass>
+                  <String fx:value="transparent" />
+                  <String fx:value="box" />
+               </styleClass>
+            </ComboBox>
+            <Button fx:id="btnClear" layoutX="189.0" layoutY="433.0" mnemonicParsing="false" onAction="#processclear" prefHeight="40.0" prefWidth="71.0" styleClass="clear-btn" stylesheets="@../style/application.css" text="Clear" />
+            <Button fx:id="btnNew" layoutX="511.0" layoutY="20.0" mnemonicParsing="false" onAction="#processnew" prefHeight="40.0" prefWidth="71.0" styleClass="new-btn" stylesheets="@../style/application.css" text="New" AnchorPane.rightAnchor="600.0" AnchorPane.topAnchor="20.0" />
+            <Button fx:id="btnRefresh" layoutX="800.0" layoutY="20.0" mnemonicParsing="false" onAction="#processrefresh" prefHeight="40.0" prefWidth="82.0" styleClass="save-btn" stylesheets="@../style/application.css" text="Refresh" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="20.0" />
+            <ComboBox fx:id="comboStudent" layoutX="155.0" layoutY="309.0" prefHeight="40.0" prefWidth="200.0" promptText="Student Name" stylesheets="@../style/application.css">
+               <styleClass>
+                  <String fx:value="transparent" />
+                  <String fx:value="box" />
+               </styleClass>
+            </ComboBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="800.0" prefWidth="1000.0" styleClass="background" stylesheets="@../style/application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.YearController">
+   <center>
+      <AnchorPane prefHeight="800.0" prefWidth="750.0" styleClass="white-bg" stylesheets="@../style/application.css" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="yearTable" layoutX="381.0" layoutY="63.0" prefHeight="500.0" prefWidth="400.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="40.0">
+               <columns>
+                  <TableColumn fx:id="id" prefWidth="60.0" text="No" />
+                  <TableColumn fx:id="yearname" prefWidth="1200.0" text=" Year  Name" />
+               </columns>
+            </TableView>
+            <Button fx:id="btnDelete" layoutX="240.0" layoutY="220.0" mnemonicParsing="false" onAction="#processDelete" prefHeight="40.0" prefWidth="80.0" styleClass="delete-btn" stylesheets="@../style/application.css" text="Delete " />
+            <Button fx:id="btnAdd" layoutX="110.0" layoutY="220.0" mnemonicParsing="false" onAction="#processAdd" prefHeight="40.0" prefWidth="80.0" styleClass="add-btn" stylesheets="@../style/application.css" text="Add" />
+            <Label layoutX="50.0" layoutY="120.0" prefHeight="50.0" prefWidth="103.0" text="Year Name :">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <TextField fx:id="tfyearname" layoutX="168.0" layoutY="117.0" prefHeight="40.0" prefWidth="200.0" stylesheets="@../style/application.css">
+               <styleClass>
+                  <String fx:value="input" />
+                  <String fx:value="transparent" />
+               </styleClass></TextField>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </center>
+</BorderPane>
